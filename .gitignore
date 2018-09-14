@@ -1,0 +1,10 @@
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+INIT/
+BACKUP/
+DRAFT/
