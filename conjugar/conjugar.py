@@ -301,7 +301,7 @@ def creat_regular_sp_table():
     crtb.append_row(['él,ella,usted','-a','-a','-a','s3'])
     crtb.append_row(['nostros','-emos','-amos','-amos','pl1'])
     crtb.append_row(['vostros','-éis','-áis','-an','pl2'])
-    crtb.append_row(['ellos,ustedes','-en','-áis','-an','pl3'])
+    crtb.append_row(['ellos,ustedes','-en','-an','-an','pl3'])
     return(crtb)
 
 TBL_SP =  creat_regular_sp_table()
