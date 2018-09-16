@@ -1,4 +1,3 @@
-
 import copy
 import re
 
@@ -298,9 +297,9 @@ def creat_regular_sp_table():
     crtb = xcr.crtable(colnameslist = cnl,table=table,keynameslist = knl)
     crtb.append_row(['yo','-e','-a','-a','s1'])
     crtb.append_row(['tú','-es','-as','-as','s2'])
-    crtb.append_row(['él,ella,usted','-a','-a','-a','s3'])
+    crtb.append_row(['él,ella,usted','-e','-a','-a','s3'])
     crtb.append_row(['nostros','-emos','-amos','-amos','pl1'])
-    crtb.append_row(['vostros','-éis','-áis','-an','pl2'])
+    crtb.append_row(['vostros','-éis','-áis','-áis','pl2'])
     crtb.append_row(['ellos,ustedes','-en','-an','-an','pl3'])
     return(crtb)
 
@@ -818,12 +817,40 @@ def load_dict(fn):
 
 #########################
 
-
-# DIFF = {}
 #CACHE = sys.argv[1]
-# for verbo in cache:
-    # DIFF[verbo] = tbl_diff(verbo,cache)
 
+def get_irregular(cache):
+    DIFF = {}
+    for verbo in cache:
+        tmp = tbl_diff(verbo,cache)
+        if(tmp.__len__() == 0):
+            pass
+        else:
+            DIFF[verbo] = tmp
+    return(DIFF)
+
+
+#
+def get_lefted(DIFF,cache):
+    kl = list(DIFF.keys())
+    lefted = eded.sub_algo(cache,kl)
+    return(lefted)
+
+
+#####################
+#nvft.write_json(fn='irregular.crtable.json',json=lefted,op='w+')
+#nvft.write_json(fn='diff.crtable.json',json=DIFF,op='w+')
+#####################
+
+def get_irr_via_lngth(lefted,lngth):
+    arr = []
+    for word in lefted:
+        if(lngth == word.__len__()):
+            arr.append(word)
+    return(arr)
+
+IR4 = ['asir', 'caer', 'fiar', 'huir', 'leer', 'liar', 'oler', 'piar', 'roer']
+IR5 = ['aguar', 'aliar', 'alzar', 'andar', 'aunar', 'aviar', 'caber', 'cagar', 'cazar', 'cegar', 'ceñir', 'cocer', 'coger', 'creer', 'criar', 'decir', 'doler', 'errar', 'estar', 'fluir', 'gañir', 'gemir', 'gozar', 'guiar', 'haber', 'hacer', 'helar', 'herir', 'hozar', 'jugar', 'legar', 'ligar', 'lucir', 'mecer', 'medir', 'moler', 'morir', 'mover', 'mugir', 'nacer', 'negar', 'nevar', 'pacer', 'pagar', 'pecar', 'pedir', 'pegar', 'picar', 'poder', 'poner', 'regar', 'regir', 'rezar', 'reñir', 'rizar', 'rodar', 'rogar', 'rozar', 'rugir', 'saber', 'sacar', 'salir', 'secar', 'segar', 'solar', 'soler', 'sonar', 'soñar', 'tañer', 'tener', 'teñir', 'tocar', 'traer', 'ungir', 'vagar', 'valer', 'venir', 'volar', 'yacer']
 
 
 
