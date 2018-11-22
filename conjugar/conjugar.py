@@ -736,7 +736,6 @@ def get_regular_crtb(verbo,col = ['ip', 'ipi', 'ipps', 'ifi', 'cs', 'sp', 'sfi',
 def get_dle_crtb(verbo,cache):
     print(cache[verbo]['crtb'])
     crtb  = xcr.crtable(crtable=cache[verbo]['crtb'])
-    print(crtb.table)
     return(crtb)
 
 def spi_dle2eu(spi):
