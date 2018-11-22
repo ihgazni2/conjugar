@@ -756,6 +756,9 @@ def dle2eudict(crtb,**kwargs):
         ncrtb = copy.deepcopy(crtb)
     else:
         ncrtb = crtb
+    #####
+    print(ncrtb.crtable)
+    #####
     spi = ncrtb.col('spi')
     spi = elel.array_map(spi,spi_dle2eu)
     spi = ltdict.list_to_ltdict(spi)
