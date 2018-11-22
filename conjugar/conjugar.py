@@ -763,6 +763,9 @@ def dle2eudict(crtb,**kwargs):
     cnl = ncrtb.colnameslist
     knl = ['person','prsn_abbr']
     table = {}
+    #debug
+    print(ncrtb.crtable)
+    #debug
     table[0] = ncrtb.crtable['table'][0]
     table[1] = ncrtb.crtable['table'][1]
     table[1][0] = tu_dle2eu(ncrtb.crtable['table'][1][0])
