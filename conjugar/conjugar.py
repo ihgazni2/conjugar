@@ -756,9 +756,6 @@ def dle2eudict(crtb,**kwargs):
         ncrtb = copy.deepcopy(crtb)
     else:
         ncrtb = crtb
-    #####
-    print(ncrtb.crtable)
-    #####
     spi = ncrtb.col('spi')
     spi = elel.array_map(spi,spi_dle2eu)
     spi = ltdict.list_to_ltdict(spi)
@@ -766,9 +763,6 @@ def dle2eudict(crtb,**kwargs):
     cnl = ncrtb.colnameslist
     knl = ['person','prsn_abbr']
     table = {}
-    #debug
-    print(ncrtb.crtable)
-    #debug
     table[0] = ncrtb.crtable['table'][0]
     table[1] = ncrtb.crtable['table'][1]
     table[1][0] = tu_dle2eu(ncrtb.crtable['table'][1][0])
@@ -795,6 +789,7 @@ def cr_value(crtb,rowname,colname):
 def tbl_diff(verbo,cache,col = ['ip', 'ipi', 'ipps', 'ifi', 'cs', 'sp', 'sfi', 'spi', 'ia']):
     crtb1 = get_regular_crtb(verbo)
     crtb2 = get_dle_crtb(verbo,cache)
+    print(crtb2.crtable)
     crtb2 = dle2eudict(crtb2)
     rnl = crtb1.col('person')
     diff_pair_list = []
