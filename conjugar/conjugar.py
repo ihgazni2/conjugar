@@ -734,8 +734,9 @@ def get_regular_crtb(verbo,col = ['ip', 'ipi', 'ipps', 'ifi', 'cs', 'sp', 'sfi',
 
 #################
 def get_dle_crtb(verbo,cache):
-    print(cache[verbo]['crtb'])
-    crtb  = xcr.crtable(crtable=cache[verbo]['crtb'])
+    tmp = cache[verbo]['crtb']
+    tmp = xcr.naturalize_crtable(tmp)
+    crtb  = xcr.crtable(crtable=tmp)
     return(crtb)
 
 def spi_dle2eu(spi):
@@ -749,6 +750,7 @@ def tu_dle2eu(tuvos):
     return(arr[0])
 
 def dle2eudict(crtb,**kwargs):
+    #
     print(crtb.crtable)
     if('deepcopy' in kwargs):
         deepcopy = kwargs['deepcopy']
@@ -855,4 +857,4 @@ IR4 = ['asir', 'caer', 'fiar', 'huir', 'leer', 'liar', 'oler', 'piar', 'roer']
 IR5 = ['aguar', 'aliar', 'alzar', 'andar', 'aunar', 'aviar', 'caber', 'cagar', 'cazar', 'cegar', 'ceñir', 'cocer', 'coger', 'creer', 'criar', 'decir', 'doler', 'errar', 'estar', 'fluir', 'gañir', 'gemir', 'gozar', 'guiar', 'haber', 'hacer', 'helar', 'herir', 'hozar', 'jugar', 'legar', 'ligar', 'lucir', 'mecer', 'medir', 'moler', 'morir', 'mover', 'mugir', 'nacer', 'negar', 'nevar', 'pacer', 'pagar', 'pecar', 'pedir', 'pegar', 'picar', 'poder', 'poner', 'regar', 'regir', 'rezar', 'reñir', 'rizar', 'rodar', 'rogar', 'rozar', 'rugir', 'saber', 'sacar', 'salir', 'secar', 'segar', 'solar', 'soler', 'sonar', 'soñar', 'tañer', 'tener', 'teñir', 'tocar', 'traer', 'ungir', 'vagar', 'valer', 'venir', 'volar', 'yacer']
 
 
-
+#
