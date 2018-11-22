@@ -749,6 +749,7 @@ def tu_dle2eu(tuvos):
     return(arr[0])
 
 def dle2eudict(crtb,**kwargs):
+    print(crtb.crtable)
     if('deepcopy' in kwargs):
         deepcopy = kwargs['deepcopy']
     else:
