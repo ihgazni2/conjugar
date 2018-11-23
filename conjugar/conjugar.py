@@ -726,6 +726,34 @@ def ip_rule_ger_gir(v,crtb):
     return(crtb)
 
 
+def ip_rule_guir(v,crtb):
+    '''
+        #以-ger, -gir结尾的动词，
+        #用通用规则变位完成之后，把结尾元音o的前面要将gu改为g.
+    '''
+    cond1 = v.endswith('guir')
+    cond = cond1
+    if(cond):
+        col = crtb.col('ip')
+        for i in range(0,col.__len__()):
+            col[i] =  eses.replace(col[i],re.compile('guo$'),'go')
+        crtb.modify_col('ip',col)
+    else:
+        pass
+    return(crtb)
+
+
+def rule_engine1(v,crtb,cls,orig_end,after_end,rep):
+    cond1 = v.endswith(orig_end)
+    cond = cond1
+    if(cond):
+        col = crtb.col(cls)
+        for i in range(0,col.__len__()):
+            col[i] =  eses.replace(col[i],re.compile(after_end + '$'),'rep')
+        crtb.modify_col(cls,col)
+    else:
+        pass
+    return(crtb)
 
 
 
@@ -753,6 +781,7 @@ def get_regular_crtb(verbo,col = ['ip', 'ipi', 'ipps', 'ifi', 'cs', 'sp', 'sfi',
     table = rows
     crtb = xcr.crtable(colnameslist = cnl,table=table,keynameslist = knl)
     crtb = ip_rule_ger_gir(verbo,crtb)
+    crtb = ip_rule_guir(verbo,crtb)
     return(crtb)
 
 #################
