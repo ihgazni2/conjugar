@@ -720,7 +720,7 @@ def ip_rule_ger_gir(v,crtb):
         col = crtb.col('ip')
         for i in range(0,col.__len__()):
             col[i] =  eses.replace(col[i],re.compile('go$'),'jo')
-        crtb = crtb.modify_col('ip',col)
+        crtb.modify_col('ip',col)
     else:
         pass
     return(crtb)
