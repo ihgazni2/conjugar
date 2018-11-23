@@ -715,12 +715,12 @@ def ip_rule_ger_gir(v,crtb):
     '''
     cond1 = v.endswith('ger')
     cond2 = v.endswith('gir')
-    cond = (cond1 & cond2)
+    cond = (cond1 | cond2)
     if(cond):
         col = crtb.col('ip')
         for i in range(0,col.__len__()):
             col[i] =  eses.replace(col[i],re.compile('go$'),'jo')
-        crtb.modify_col('ip',col)
+        crtb = crtb.modify_col('ip',col)
     else:
         pass
     return(crtb)
