@@ -707,6 +707,32 @@ def get_regular_tense2(tense_abbr,verbo,prsn):
         rslt = None
     return(rslt)
 
+#IP
+def ip_rule_ger_gir(v,crtb):
+    '''
+        #以-ger, -gir结尾的动词，
+        #用通用规则变位完成之后，把结尾元音o的前面要将g改为j.
+    '''
+    cond1 = v.endswith('ger')
+    cond2 = v.endswith('gir')
+    cond = (cond1 & cond2)
+    if(cond):
+        col = crtb.col('ip')
+        for i in range(0,col.__len__()):
+            col[i] =  eses.replace(col[i],re.compile('go$'),'jo')
+        crtb.modify_col('ip',col)
+    else:
+        pass
+    return(crtb)
+
+
+
+
+
+
+
+
+
 def get_regular_row(verbo,prsn,col = ['ip', 'ipi', 'ipps', 'ifi', 'cs', 'sp', 'sfi', 'spi', 'ia']):
     arr = [prsn]
     tmp = elel.array_map(col,get_regular_tense2,verbo,prsn)
@@ -726,6 +752,7 @@ def get_regular_crtb(verbo,col = ['ip', 'ipi', 'ipps', 'ifi', 'cs', 'sp', 'sfi',
     knl = ['person','prsn_abbr']
     table = rows
     crtb = xcr.crtable(colnameslist = cnl,table=table,keynameslist = knl)
+    crtb = ip_rule_ger_gir(verbo,crtb)
     return(crtb)
 
 #################
