@@ -1,3 +1,3 @@
 #
-__all__ = ['conjugar']
+__all__ = ['conjugar','acentuacion']
 

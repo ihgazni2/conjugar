@@ -12,6 +12,8 @@ from xdict.jprint import pobj
 from xdict import ltdict
 
 
+import acentuacion
+
 #########################
 
 ALPHABETA ='abcdefghijklmnopqrstuvwxyzáéíóúñü!?ç'
