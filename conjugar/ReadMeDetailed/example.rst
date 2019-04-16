@@ -392,6 +392,17 @@ APIS
 
 
 - get_stress_charpos_of_silaba
+    
+    ::
+        
+        >>> acen.get_stress_char_pos_of_silaba("guay")
+        2
+        >>> acen.get_stress_char_pos_of_silaba("no")
+        1
+        >>> acen.get_stress_char_pos_of_silaba("o")
+        0
+        >>>
+
 - get_charloc
 - get_spanloc
 - get_spans
