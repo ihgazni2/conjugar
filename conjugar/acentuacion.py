@@ -479,7 +479,10 @@ def get_stress_char_pos_of_silaba(silaba):
             ii = 0
         else:
             pass
-    acute_pos = spans[oi][0] + ii
+    if(ii):
+        acute_pos = spans[oi][0] + ii
+    else:
+        acute_pos = None
     return(acute_pos)
 
 
