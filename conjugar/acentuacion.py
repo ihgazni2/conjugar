@@ -462,22 +462,27 @@ def get_stress_char_pos_of_silaba(silaba):
     ii = None
     for i in range(arr.__len__()):
         ele = arr[i]
-        oi = i
         if(ele in Y_TRIPTONGO):
             ii = 1
+            oi = i
         elif(ele in Y_DIPTRONGO):
             ii = 0
+            oi = i
         elif(ele in TRIPTONGO):
             ii = 1
+            oi = i
         elif(ele in DIPTRONGO):
+            oi = i
             if(ele[0] in (ACUTE_STRONG_VOWEL + NORMAL_STRONG_VOWEL)):
                 ii = 0
             else:
                 ii = 1
         elif(ele in VOWEL):
             ii = 0
+            oi = i
         elif((ele.lower()=='y') and (i == arr.__len__() - 1)):
             ii = 0
+            oi = i
         else:
             pass
     if(ii!=None):
