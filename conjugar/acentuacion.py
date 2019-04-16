@@ -409,7 +409,7 @@ def get_silabas(word):
 #recvr      recover
 
 #
-def get_clstarr_spans(arr):
+def get_spans(arr):
     rslt = []
     si = 0
     for i in range(0,arr.__len__()):
@@ -419,6 +419,8 @@ def get_clstarr_spans(arr):
         rslt.append(span)
         si = ei
     return(rslt)
+
+
 
 def get_spanloc(spans,charloc):
     for i in range(0,spans.__len__()):
