@@ -23,8 +23,14 @@ Part1 :acentuacion
 APIS
 ~~~~
 
+- show_stress
+
+.. image:: ../Images/show_stress.0.png
+
 
 - get_stress
+
+.. image:: ../Images/get_stress.0.png
 
 
 - get_silabas
