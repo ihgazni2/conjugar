@@ -345,6 +345,18 @@ def arr_recvr_lasty(arr):
     return(arr)
 
 
+def vowel_in(pongo):
+    chars = VOWEL
+    for c in chars:
+        if(c in pongo):
+            return(True)
+        else:
+            pass
+    return(False)
+
+
+
+
 def get_silabas(word):
     arr = word2clstarr(word)
     arr = arr_repl_lasty(arr)
@@ -368,6 +380,10 @@ def get_silabas(word):
         rslt.append(arr[i-3]+arr[i-2])
         tok = arr[i-1] + input_symbol
         return(tok)
+    def pop3_push(tok,input_symbol,rslt):
+        rslt.append(arr[i-3]+arr[i-2]+arr[i-1])
+        tok = input_symbol
+        return(tok)
     machine = symm.FSM()
     machine.add("INIT",is_conclst,push,"C")
     machine.add("INIT",is_vowclst,push,"V")
@@ -375,10 +391,21 @@ def get_silabas(word):
     machine.add("C",is_conclst,pop,"CC")
     machine.add("V",is_conclst,push,"VC")
     machine.add("V",is_vowclst,pop_push,"V")
+    #machine.add("CC",is_conclst,push,"CCC")  impossible!
+    machine.add("CC",is_vowclst,push,"CCV")
+    machine.add("CCV",is_vowclst,pop3_posh,"V")
+    machine.add("CCV",is_conclst,push,"CCVC")
+    machine.add("CCVC",is_vowclst,pop3_push,"CV")
+    machine.add("CCVC",is_conclst,pop_push,"C")
+    ###strass stret-ta stric-to strip-per
     machine.add("CV",is_vowclst,pop_push,"V")
     machine.add("CV",is_conclst,push,"CVC")
     machine.add("VC",is_vowclst,pop1_push,"CV")
-    machine.add("VC",is_conclst,pop_push,"C")
+    #
+    machine.add("VC",is_conclst,push,"VCC")
+    machine.add("VCC",is_conclst,pop3_push,"C")
+    machine.add("VCC",is_vowclst,pop2_push,"CV")
+    #
     machine.add("CVC",is_vowclst,pop2_push,"CV")
     machine.add("CVC",is_conclst,pop_push,"C")
     rslt = []
@@ -400,7 +427,12 @@ def get_silabas(word):
     if(tok == ''):
         pass
     else:
-        rslt.append(tok)
+        cond1 = not(vowel_in(tok))
+        cond2 = not("y" in tok.lower())
+        if(cond1 and cond2):
+            rslt[-1] = rslt[-1] + tok
+        else:
+            rslt.append(tok)
     rslt = arr_recvr_lasty(rslt)
     return(rslt)
 
