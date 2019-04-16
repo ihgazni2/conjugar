@@ -290,7 +290,7 @@ def de_y(s):
     regex_y_trip = araq.creat_or_from_sarr(Y_TRIPTONGO)
     de_y_rslt = araq.regex_split(regex_y_trip,s)
     de_y_rslt = de_engine(de_y_rslt,regex_y_trip,Y_TRIPTONGO)
-    regex_y_dip = araq.creat_or_from_sarr(acen.Y_DIPTRONGO)
+    regex_y_dip = araq.creat_or_from_sarr(Y_DIPTRONGO)
     de_y_rslt = de_engine(de_y_rslt,regex_y_dip,Y_DIPTRONGO)
     return(de_y_rslt)
 
