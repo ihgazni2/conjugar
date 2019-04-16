@@ -27,12 +27,12 @@ APIS
 
 - show_stress
 
-.. image:: ../Images/show_stress.0.png
+.. image:: conjugar/Images/show_stress.0.png
 
 
 - get_stress
 
-.. image:: ../Images/get_stress.0.png
+.. image:: conjugar/Images/get_stress.0.png
 
 
 - get_silabas
@@ -436,7 +436,7 @@ APIS
 
 
 
-Part1 :conjugar
+Part2 :conjugar
 ================
 
 - In Progressing.....
