@@ -393,7 +393,7 @@ def get_silabas(word):
     machine.add("V",is_vowclst,pop_push,"V")
     #machine.add("CC",is_conclst,push,"CCC")  impossible!
     machine.add("CC",is_vowclst,push,"CCV")
-    machine.add("CCV",is_vowclst,pop3_posh,"V")
+    machine.add("CCV",is_vowclst,pop3_push,"V")
     machine.add("CCV",is_conclst,push,"CCVC")
     machine.add("CCVC",is_vowclst,pop3_push,"CV")
     machine.add("CCVC",is_conclst,pop_push,"C")
