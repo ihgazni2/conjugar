@@ -462,7 +462,7 @@ def word_recvr_lasty(word):
 
 
 def get_stress_char(silaba):
-    rslt = elel.find_first(s,lambda ele:(ele in VOWEL))
+    rslt = elel.find_first(silaba,lambda ele:(ele in VOWEL))
     return(rslt)
 
 
