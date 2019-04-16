@@ -414,6 +414,9 @@ def get_silabas(word):
     for i in range(0,arr.__len__()):
         input_symbol = arr[i]
         action,next_state,trigger_checker = machine.search(curr_state,input_symbol)
+        ##
+        print(action,curr_state,next_state,input_symbol)
+        ##
         if(action):
             tok = action(tok,input_symbol,rslt)
         else:
@@ -424,6 +427,9 @@ def get_silabas(word):
             break
         else:
             pass
+    ###
+    print(rslt,tok)
+    ###
     if(tok == ''):
         pass
     else:
