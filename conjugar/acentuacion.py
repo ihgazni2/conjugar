@@ -415,7 +415,7 @@ def get_silabas(word):
         input_symbol = arr[i]
         action,next_state,trigger_checker = machine.search(curr_state,input_symbol)
         ##
-        print(action,curr_state,next_state,input_symbol)
+        print(i,action,curr_state,next_state,input_symbol)
         ##
         if(action):
             tok = action(tok,input_symbol,rslt)
