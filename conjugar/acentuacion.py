@@ -455,47 +455,33 @@ def word_recvr_lasty(word):
 #stress_char_wordloc         stress-char-location-in-word
 
 
-def get_stress_char(silaba):
-    rslt = elel.find_first(silaba,lambda ele:(ele in VOWEL))
-    return(rslt)
-
-
-def get_stress(word):
-    rslt = {}
-    silabas = get_silabas(word)
-    lngth = silabas.__len__()
-    wlngth = word.__len__()
-    regex = araq.creat_or_from_sarr(ACUTE_VOWEL)
-    m = regex.search(word)
-    if(m):
-        #如果有重音，重读音节在重音字母上
-        loc = m.start()
-        span_loc = get_spanloc(silabas,loc)
-        silaba = silabas[span_loc]
-        rslt['silaba'] = silaba
-        rslt['clstloc'] = span_loc
-        rslt['span'] = m.span()
-        tmp = get_stress_char(silaba)
-        rslt['char'] = tmp['value']
-        start = m.start()
-        rslt['chloc'] = start+tmp['index']
-        end = m.end()
-        rslt['color_span'] = [(0,start),(start,rslt['chloc']),(rslt['chloc'],end),(end,wlngth)]
-
-
-    else:
-        word_end = word[-1]
-        if(is_vowclst(word_end)):
-            span_loc = lngth -2 
-            silaba = silabas[span_loc]
-            
-        elif((word_end=='n') | (word_end=='s')):
-            span_loc = lngth -2
-            silaba = silabas[span_loc]
-            #loc 的规则
+def get_stress_char_pos_of_silaba(silaba):
+    arr = word2clstarr(silaba)
+    spans = get_spans(arr)
+    ii = None
+    for i in range(arr.__len__()):
+        ele = arr[i]
+        oi = i
+        if(ele in Y_TRIPTONGO):
+            ii = 1
+        elif(ele in Y_DIPTRONGO):
+            ii = 0
+        elif(ele in TRIPTONGO):
+            ii = 1
+        elif(ele in DIPTRONGO):
+            if(ele[0] in (ACUTE_STRONG_VOWEL + NORMAL_STRONG_VOWEL)):
+                ii = 0
+            else:
+                ii = 1
+        elif(ele in VOWEL):
+            ii = 0
+        elif((ele.lower()=='y') and (i == arr.__len__() - 1)):
+            ii = 0
         else:
-            span_loc = lngth -1
-            silaba = silabas[span_loc]
-            #loc 的规则
+            pass
+    acute_pos = spans[oi][0] + ii
+    return(acute_pos)
+
+
 
 
