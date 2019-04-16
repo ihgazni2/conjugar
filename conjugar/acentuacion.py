@@ -487,4 +487,32 @@ def get_stress_char_pos_of_silaba(silaba):
 
 
 
+def acute_vowel_in(pongo):
+    chars = ACUTE_VOWEL
+    for c in chars:
+        if(c in pongo):
+            return(True)
+        else:
+            pass
+    return(False)
+
+def get_accent_pos(s):
+    silabas = get_silabas(s)
+    stress_chars = elel.mapv(silabas,get_stress_char_pos_of_silaba)
+    lngth = silabas.__len__()
+    cond1 = (s[-1] in CONSONANT)
+    cond2 = not(s[-1] in "ns")
+    if(cond1 & cond2):
+        accent_pos = lngth - 1
+    else:
+        accent_pos = lngth - 2
+    for i in range(lngth):
+        pongo=silabas[i]
+        cond = acute_vowel_in(pongo)
+        if(cond):
+            accent_pos = i
+        else:
+            pass
+    return((accent_pos,silabas[accent_pos]))
+
 
