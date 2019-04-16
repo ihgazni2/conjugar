@@ -1,10 +1,19 @@
+.. contents:: Table of Contents
+   :depth: 5
+
+
 Install
-=======
+-------
 - pip3 install conjugar
 
 
 Usage
-=====
+-----
+
+
+
+Part1 :acentuacion
+==================
 
     :: 
         
@@ -12,14 +21,15 @@ Usage
         from xdict.jprint import pobj,pdir
 
 APIS
-=====
+~~~~
 
 - get_charloc
 - get_spanloc
 - get_clstarr_spans
 - get_stress
-- get_stress_char
 - get_silabas
+- get_stress_char
+
 
 
 - AC_A
@@ -358,7 +368,6 @@ APIS
 - word2clstarr
 - word_recvr_lasty
 - word_repl_lasty
-
 
 
 
