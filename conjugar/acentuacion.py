@@ -284,24 +284,16 @@ def de_engine(last_de_rslt,curr_regex,conds):
 
 #################################################
 #FUNCS
+
+
 def de_y(s):
-    cond1 = araq.de_cond_or_engine(s,Y_TRIPTONGO)
-    if(cond1):
-        arr = [s[:-3],s[-3:]]
-        return(arr)
-    else:
-        pass
-    cond2 = araq.de_cond_or_engine(s,Y_DIPTRONGO)
-    if(cond2):
-        arr = [s[:-2],s[-2:]]
-        return(arr)
-    else:
-        pass
-    if(s[-1]=='y'):
-        arr = [s[:-1],s[-1:]]
-        return(arr)
-    else:
-        pass
+    regex_y_trip = araq.creat_or_from_sarr(acen.Y_TRIPTONGO)
+    de_y_rslt = araq.regex_split(regex_y_trip,s)
+    de_y_rslt = de_engine(de_y_rslt,regex_y_trip,Y_TRIPTONGO)
+    regex_y_dip = araq.creat_or_from_sarr(acen.Y_DIPTRONGO)
+    de_y_rslt = de_engine(de_y_rslt,regex_y_dip,Y_DIPTRONGO)
+    return(de_y_rslt)
+
 
 def de_trip(de_y_rslt):
     regex_trip = araq.creat_or_from_sarr(TRIPTONGO)
