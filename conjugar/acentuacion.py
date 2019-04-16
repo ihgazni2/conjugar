@@ -290,9 +290,8 @@ def de_engine(last_de_rslt,curr_regex,conds):
 def de_y(s):
     regex_y_trip = araq.creat_or_from_sarr(Y_TRIPTONGO)
     de_y_rslt = araq.regex_split(regex_y_trip,s)
-    de_y_rslt = de_engine(de_y_rslt,regex_y_trip,Y_TRIPTONGO)
     regex_y_dip = araq.creat_or_from_sarr(Y_DIPTRONGO)
-    de_y_rslt = de_engine(de_y_rslt,regex_y_dip,Y_DIPTRONGO)
+    de_y_rslt = de_engine(de_y_rslt,regex_y_dip,Y_TRIPTONGO)
     return(de_y_rslt)
 
 
@@ -415,7 +414,6 @@ def get_silabas(word):
         input_symbol = arr[i]
         action,next_state,trigger_checker = machine.search(curr_state,input_symbol)
         ##
-        print(i,action,curr_state,next_state,input_symbol,tok)
         ##
         if(action):
             tok = action(tok,input_symbol,rslt)
@@ -428,7 +426,6 @@ def get_silabas(word):
         else:
             pass
     ###
-    print(rslt,tok)
     ###
     if(tok == ''):
         pass
