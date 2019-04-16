@@ -2,7 +2,8 @@ import estring.estring as eses
 import elist.elist as elel
 import conjugar.symmtera as symm
 import conjugar.araq as araq
-
+import spaint.spaint as spsp
+import copy
 
 class Help():
     def __init__(self):
