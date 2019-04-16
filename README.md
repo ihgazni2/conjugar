@@ -1,5 +1,7 @@
 # conjugar
->__handle ...__
+>__handle ...__<br>
+refer to this link https://github.com/SekouD/mlconjug/blob/master/mlconjug/data/conjug_manager/verbs-es.json for 
+prefix reference.
 
 # install
 >__pip3 install conjugar
