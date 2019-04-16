@@ -23,12 +23,34 @@ Part1 :acentuacion
 APIS
 ~~~~
 
-- get_charloc
-- get_spanloc
-- get_clstarr_spans
+
 - get_stress
+
+
 - get_silabas
-- get_stress_char
+
+    ::
+        
+        s = 'paraguayo'
+        acen.get_silabas(s)
+        >>>['pa', 'ra', 'guay', 'o']
+        
+- get_spans
+
+    ::
+        
+        spans = acen.get_spans(silabas)
+        spans
+        >>>>[(0, 2), (2, 4), (4, 8), (8, 9)]
+
+
+- word2clstarr 
+    
+    ::
+ 
+        acen.word2clstarr(s)
+        >>>['p', 'a', 'r', 'a', 'g', 'uay', 'o']
+
 
 
 
@@ -365,12 +387,14 @@ APIS
 
 - arr_recvr_lasty
 - arr_repl_lasty
-- word2clstarr
 - word_recvr_lasty
 - word_repl_lasty
 
 
-
+- get_stress_charpos_of_silaba
+- get_charloc
+- get_spanloc
+- get_spans
 
 
 
