@@ -549,5 +549,7 @@ def show_stress(s,stress_word_color = "green",stress_char_color="yellow"):
     color_accent = spsp.sieipaint(accent,rtrn=1,*siei_params)
     nsilabas = copy.deepcopy(silabas)
     nsilabas[accent_pos] = color_accent
-    print(elel.join(nsilabas,"-"))
+    rslt = elel.join(nsilabas,"-")
+    print(rslt)
+    return(rslt)
 
