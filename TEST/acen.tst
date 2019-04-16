@@ -74,4 +74,16 @@ for each in stress_arr:
     if("ya" in each['silabas']):
         pobj(each)
 
+####
+
+y 比较特殊  还需要再 细分
+    ay-u-dan-te
+    a-yu-dan-te
+究竟哪个对？
+
+ay,ey,oy,uy只有后面有元音时才可以划分，
+如果后面是辅音时，不可划分，如ha-ya 和 
+muy就是两个代表的例子
+
+####
 
