@@ -34,7 +34,17 @@ APIS
         s = 'paraguayo'
         acen.get_silabas(s)
         >>>['pa', 'ra', 'guay', 'o']
+
+- get_accent_pos
+
+    ::
+
+        s = "paraguayo"
+        acen.get_accent_pos(s)
+        >>>(2,"guay")
         
+
+
 - get_spans
 
     ::
@@ -407,7 +417,7 @@ APIS
 - get_spanloc
 - get_spans
 
-
+- acute_vowel_in
 
 
 
