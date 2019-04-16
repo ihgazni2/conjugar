@@ -1,6 +1,6 @@
 import estring.estring as eses
 import elist.elist as elel
-import conjugar.symmtera as symmtera
+import conjugar.symmtera as symm
 import conjugar.araq as araq
 
 
