@@ -1,19 +1,77 @@
-from conjugar.acentuacion import show_stress,get_stress
+import conjugar.acentuacion as acen
 from efdir import fs
 import elist.elist as elel
-words = fs.rjson("../RESOURCES/conjugar.words.json")
+from xdict.jprint import pobj,pdir
 
-第38个 'abstraer'
-['a', 'b', 's', 'tr', 'a', 'e', 'r']   ----------------------
 
-三个辅音  前两个 归前  后两个 归后面  
+dummy = acen.show_stress('abstraer')
+dummy = acen.show_stress('strass')
+dummy = acen.show_stress('stretta')
+dummy = acen.show_stress('stricto')
+dummy = acen.show_stress('stripper')
+dummy = acen.show_stress('ahuyentar')
 
-stress_arr = elel.mapv(words,get_stress)
+
+
+words = fs.rjson("../RESOURCES/granada_es.all.single.nomark.arr")
+
+
+
+def get_stress_arr(words):
+    words  = elel.mapv(words,str.lower)
+    failed = []
+    stress_arr = []
+    for i in range(words.__len__()):
+        try:
+            ele = acen.get_stress(words[i])
+            if("yal" in ele['silabas']):
+                print(ele)
+            stress_arr.append(ele)
+        except:
+            failed.append(words[i])
+        else:
+            pass
+    return(stress_arr)
+
+stress_arr = get_stress_arr(words)
 fs.wjson("es_stress.json",stress_arr)
 
 
+def get_silaba_arr(stress_arr):
+    silaba_set = set({})
+    for each in stress_arr:
+        silabas = each['silabas']
+        for silaba in silabas:
+            if(silaba in silaba_set):
+                pass
+            else:
+                silaba_set.add(silaba)
+    silabas = list(silaba_set)
+    silabas.sort()
+    return(silabas)
+
+
+silaba_arr = get_silaba_arr(stress_arr)
+
+fs.wjson("es_silaba_arr.json",silaba_arr)
+
+
+# fs.touch("es_stress.txt")
 
 
 
 
-fs.touch("es_stress.txt")
+silaba_splited_words = []
+for each in stress_arr:
+    silabas = each['silabas']
+    word = elel.join(silabas,"-")
+    silaba_splited_words.append(word)
+
+silaba_splited_words.sort()
+
+
+for each in stress_arr:
+    if("ya" in each['silabas']):
+        pobj(each)
+
+
