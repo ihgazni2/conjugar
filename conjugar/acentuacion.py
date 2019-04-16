@@ -516,3 +516,32 @@ def get_accent_pos(s):
     return((accent_pos,silabas[accent_pos]))
 
 
+def get_stress(s):
+    silabas = get_silabas(s)
+    tmp = get_accent_pos(s)
+    accent_pos = tmp[0]
+    accent = tmp[1]
+    stress_char_pos = get_stress_char_pos_of_silaba(accent)
+    stress_char = accent[stress_char_pos]
+    d = {
+        "silabas":silabas,
+        "accent_pos":accent_pos,
+        "accent":accent,
+        "stress_char_pos":stress_char_pos,
+        "stress_char":stress_char
+    }
+    return(d)
+
+
+def show_stress(s,stress_word_color = "green",stress_char_color="yellow"):
+    d = get_stress(s)
+    stress_char_pos = d["stress_char_pos"]
+    accent = d["accent"]
+    silabas = d["silabas"]
+    accent_pos = d["accent_pos"]
+    siei_params = [0,stress_char_pos,stress_word_color,stress_char_pos,stress_char_pos+1,stress_char_color,stress_char_pos+1,len(accent),stress_word_color]
+    color_accent = spsp.sieipaint(accent,rtrn=1,*siei_params)
+    nsilabas = copy.deepcopy(silabas)
+    nsilabas[accent_pos] = color_accent
+    print(elel.join(nsilabas,"-"))
+
