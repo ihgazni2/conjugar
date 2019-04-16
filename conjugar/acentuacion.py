@@ -1,7 +1,7 @@
 import estring.estring as eses
 import elist.elist as elel
-import symmtera
-import araq
+import conjugar.symmtera as symmtera
+import conjugar.araq as araq
 
 
 class Help():
