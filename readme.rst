@@ -1,3 +1,5 @@
+
+
 .. contents:: Table of Contents
    :depth: 5
 
@@ -25,12 +27,12 @@ APIS
 
 - show_stress
 
-.. image:: ../Images/show_stress.0.png
+.. image:: conjugar/Images/show_stress.0.png
 
 
 - get_stress
 
-.. image:: ../Images/get_stress.0.png
+.. image:: conjugar/Images/get_stress.0.png
 
 
 - get_silabas
@@ -428,3 +430,21 @@ APIS
 
 
 - Help
+
+
+
+
+
+
+Part2 :conjugar
+================
+
+- In Progressing.....
+
+
+
+
+
+
+
+
