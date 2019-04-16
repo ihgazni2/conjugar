@@ -388,7 +388,7 @@ def get_silabas(word):
     machine.add("INIT",is_conclst,push,"C")
     machine.add("INIT",is_vowclst,push,"V")
     machine.add("C",is_vowclst,push,"CV")
-    machine.add("C",is_conclst,pop,"CC")
+    machine.add("C",is_conclst,push,"CC")
     machine.add("V",is_conclst,push,"VC")
     machine.add("V",is_vowclst,pop_push,"V")
     #machine.add("CC",is_conclst,push,"CCC")  impossible!
