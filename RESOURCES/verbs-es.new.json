@@ -1,13 +1,7 @@
 {
     "ababillarse": {
         "root": "abab",
-        "template": "gr:illarse",
-	"combos":[
-	    "a",
-	    {"babilla-":"后肘"},
-	    "-ar",
-	    "se",
-	]
+        "template": "gr:illarse"
     },
     "abacadear": {
         "root": "abacade",
@@ -15,34 +9,19 @@
     },
     "abacorar": {
         "root": "abacor",
-        "template": "destar:ar",
-	"combos": [
-	    
-	]
+        "template": "destar:ar"
     },
     "abadanar": {
         "root": "abadan",
-        "template": "destar:ar",
-        "combos": [
-            
-        ]
+        "template": "destar:ar"
     },
     "abadernar": {
         "root": "abadern",
-        "template": "destar:ar",
-        "combos": [
-            "a",
-	    {
-	        "baderna-":"短绳",
-	    },
-	    "-ar",
-        ]
+        "template": "destar:ar"
     },
     "abajar": {
         "root": "abaj",
-        "template": "destar:ar",
-	"combos": [
-	]
+        "template": "destar:ar"
     },
     "abalallar": {
         "root": "abalall",
@@ -254,12 +233,7 @@
     },
     "abayuncar": {
         "root": "abayun",
-        "template": "humidifi:car",
-	"combos":[
-	    "a",
-	    "bayunca-",
-	    "-ar"
-	]
+        "template": "humidifi:car"
     },
     "abañar": {
         "root": "abañ",
@@ -2779,34 +2753,15 @@
     },
     "aleccionar": {
         "root": "aleccion",
-        "template": "destar:ar",
-	"combos":[
-	    "a",
-	    "leccion",
-	    "ar"
-	]
+        "template": "destar:ar"
     },
     "alechugar": {
         "root": "alechug",
-        "template": "despechug:ar",
-	"combos":[
-	    "a",
-	    {
-	        "lechug":"莴苣"
-	    },
-	    "ar"
-	]
+        "template": "despechug:ar"
     },
     "alegamar": {
         "root": "alegam",
-        "template": "destar:ar",
-	"combos": [
-	    "a",
-	    {
-	        "legam":"烂泥"
-	    },
-	    "ar"
-	]
+        "template": "destar:ar"
     },
     "aleganarse": {
         "root": "aleg",

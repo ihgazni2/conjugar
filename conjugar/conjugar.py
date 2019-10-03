@@ -9,7 +9,7 @@ import edict.edict as eded
 import xdict.CrtableLib.crtable as xcr
 from xdict.jprint import pdir
 from xdict.jprint import pobj
-from xdict import ltdict
+import ltdict.ltdict as ltdict
 
 
 import acentuacion
@@ -820,7 +820,7 @@ def dle2eudict(crtb,**kwargs):
         ncrtb = crtb
     spi = ncrtb.col('spi')
     spi = elel.array_map(spi,spi_dle2eu)
-    spi = ltdict.list_to_ltdict(spi)
+    spi = ltdict.list2ltdict(spi)
     ncrtb.modify_col('spi',spi)
     cnl = ncrtb.colnameslist
     knl = ['person','prsn_abbr']

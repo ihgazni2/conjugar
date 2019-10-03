@@ -10,7 +10,6 @@ import edict.edict as eded
 import xdict.CrtableLib.crtable as xcr
 from xdict.jprint import pdir
 from xdict.jprint import pobj
-from xdict import ltdict
 
 import navegador5.file_toolset as nvft
 
