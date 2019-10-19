@@ -10,8 +10,8 @@ setup(
       long_description = "refer to .md files in https://github.com/ihgazni2/conjugar",
       entry_points = {
          'console_scripts': [
-             'esconju=conjugar.RESOURCES.es_word_conjugar:main',
-             'esverb=conjugar.RESOURCES.es_verb_list:main'
+             'esconju=conjugar.bin.es_word_conjugar:main',
+             'esverb=conjugar.bin.es_verb_list:main'
           ]
       },
       package_data = {
