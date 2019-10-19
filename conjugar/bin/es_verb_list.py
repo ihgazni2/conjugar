@@ -8,7 +8,7 @@ import pkg_resources
 import conjugar
 
 
-TEM = pkg_resources.resource_filename("conjugar","conjugar.crtable.json")
+TEM = pkg_resources.resource_filename("conjugar","data/conjugar.crtable.json")
 
 
 import sys

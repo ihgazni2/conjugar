@@ -15,9 +15,9 @@ setup(
           ]
       },
       package_data = {
-          'resources':["REOURCES/*"]
+          'resources':["conjugar/data/*"]  #
       },
-      include_package_data=True,
+      include_package_data=True, #necessary for resources
       classifiers=[
           'Environment :: Console',
           'Environment :: Web Environment',

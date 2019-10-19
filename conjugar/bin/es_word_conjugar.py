@@ -65,7 +65,7 @@ def shword(i,args):
 
 import sys
 
-TEM = pkg_resources.resource_filename("conjugar","conjugar.crtable.json")
+TEM = pkg_resources.resource_filename("conjugar","data/conjugar.crtable.json")
 
 crtbd0 = fs.rjson(TEM)
 
