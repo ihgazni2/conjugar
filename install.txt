@@ -1,1 +1,3 @@
-/usr/local/lib/python3.6/dist-packages/conjugar-0.5-py3.6.egg
+/usr/local/lib/python3.6/dist-packages/conjugar-0.66-py3.6.egg
+/usr/local/bin/esconju
+/usr/local/bin/esverb
