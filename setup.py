@@ -1,13 +1,23 @@
 from setuptools import setup, find_packages
 setup(
       name="conjugar",
-      version = "0.5",
+      version = "0.66",
       description="handle,.in progressing..,APIs",
       author="dapeli",
       url="https://github.com/ihgazni2/conjugar",
       author_email='terryinzaghi@163.com', 
       license="MIT",
       long_description = "refer to .md files in https://github.com/ihgazni2/conjugar",
+      entry_points = {
+         'console_scripts': [
+             'esconju=conjugar.RESOURCES.es_word_conjugar:main',
+             'esverb=conjugar.RESOURCES.es_verb_list:main'
+          ]
+      },
+      package_data = {
+          'resources':["REOURCES/*"]
+      },
+      include_package_data=True,
       classifiers=[
           'Environment :: Console',
           'Environment :: Web Environment',
