@@ -442,6 +442,44 @@ Part2 :conjugar
 - In Progressing.....
 
 
+- cli 
+    
+    ::
+
+        CONJUGAR# esconju registrar ip sp
+        
+                'ip':'indicativo presente',
+                'ipps':'indictivo pretérito perfecto simple',
+                'ipa':'indicativo pretérito anterior',
+                'ipi':'indicativo pretérito imperfecto',
+                'ifi':'indicativo futuro imperfecto',
+                'sp':'subjuntivo presente',
+                'spi':'subjuntivo pretérito imperfecto',
+                'sfi':'subjuntivo futuro imperfecto',
+                'cs':'condicional simple',
+                'ia':'imperativo afirmativo',
+        
+        ip ipi ipps ifi cs sp sfi spi ia
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |         person|                   ip|         sp|prsn_abbr|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |             yo|             registro|   registre|       s1|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |         tú/vos|registras / registrás|  registres|       s2|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |          usted|             registra|   registre|      s23|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |        él,ella|             registra|   registre|       s3|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |nostros,nostras|          registramos|registremos|      pl1|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |vostros,vostras|           registráis| registréis|      pl2|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |        ustedes|            registran|  registren|     pl23|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        |    ellos,ellas|            registran|  registren|      pl3|
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
 
