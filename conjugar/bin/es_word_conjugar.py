@@ -64,6 +64,7 @@ def shword(i,args):
 
 
 import sys
+import pkg_resources
 
 TEM = pkg_resources.resource_filename("conjugar","data/conjugar.crtable.json")
 

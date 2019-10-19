@@ -15,9 +15,9 @@ setup(
           ]
       },
       package_data = {
-          'resources':["conjugar/data/*"]  #
+          'resources':["conjugar/data/*"]  #necessary for resources   ,must be used with MANIFEST.in
       },
-      include_package_data=True, #necessary for resources
+      include_package_data=True, #necessary for resources   ,must be used with MANIFEST.in
       classifiers=[
           'Environment :: Console',
           'Environment :: Web Environment',
