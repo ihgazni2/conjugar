@@ -1,0 +1,265 @@
+
+'áéíóúaeiouy'
+'iau|iei|ioi|iou|ioy|uay|uei|uey|uoy'
+'pl|bl|tl|fl|cl|gl|pr|br|tr|fr|cr|gr|dr'
+''
+
+1. TRIPTONGO
+['iai', 'iau', 'iei', 'ieu', 'ioi', 'iou', 'iái', 'iáu', 'iéi', 'iéu', 'iói', 'ióu', 'uai', 'uau', 'uei', 'ueu', 'uoi', 'uou', 'uái', 'uáu', 'uéi', 'uéu', 'uói', 'uóu', 'üei', 'üeu']
+2. Y_TRIPTONGO
+['iay', 'iey', 'ioy', 'iáy', 'iéy', 'ióy', 'uay', 'uey', 'uoy', 'uáy', 'uéy', 'uóy', 'üey']
+
+
+3. DIPTRONGO
+['ai', 'au', 'ei', 'eu', 'oi', 'ou', 'ia', 'ie', 'io', 'ua', 'ue', 'uo', 'iu', 'ui', 'ái', 'áu', 'éi', 'éu', 'ói', 'óu', 'iá', 'uá', 'ié', 'ué', 'ió', 'uó', 'üe', 'üi']
+
+4. Y_DIPTRONGO
+- 必需位于词尾
+['ay$', 'ey$', 'oy$', 'uy$', 'áy$', 'éy$', 'óy$', 'üy$']
+
+5. SOLO_Y
+y ----单独使用
+
+6. LAST_Y
+- y在位于词尾时可以被视为一个元音
+['$y']
+
+
+7. CL_CONSONANT
+[
+'pl', 'bl', 'tl', 'fl', 'cl', 'gl', 
+'pr', 'br', 'tr', 'fr', 'cr', 'gr',
+'dr'
+]
+
+8. DI_CONSONANT
+['ch', 'll', 'rr']
+
+9. CONSONANT
+['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z', 'ñ']
+
+10. VOWEL
+['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú','ü']
+
+
+# 字母表
+AC_A,AC_E,AC_I,AC_O,AC_U
+DI_U
+ENE
+UD_QM
+UD_EXCM
+CE_C
+ALPHABETA 所有字母
+
+======
+VOWEL = "áéíóúaeiouü"
+ACUTE_VOWEL = "áéíóú"
+DI$U_VOWEL = 'ü'
+NORMAL_VOWEL = "aeiou"
+NORMAL_STRONG_VOWEL = "aeo"
+NORMAL_WEAK_VOWEL = 'iu'
+
+
+interface VowelViaShape {
+    di_u:'ü',
+    acute:'áéíóú',
+    normal:{
+        strong:'aeo',
+        weak:'iu'
+    }
+}
+
+STRONG_VOWEL = "áéíóúaeo"
+STRONG_ACUTE_VOWEL = 'áéíóú'
+STRONG_NORMAL_VOWEL = 'aeo'
+WEAK_VOWEL = 'iuü'
+WEAK_DI$U_VOWEL = 'ü'
+WEAK_NORMAL_VOWEL = 'iu'
+
+interface VowelViaStrong {
+    strong:{
+        acute:'áéíóú',
+        normal:'aeo'
+    },
+    weak:{
+        di_u:'ü',
+        normal:'iu'
+    }
+}
+
+
+
+
+
+
+
+#命令行分割系统
+#每一级只用一次split
+
+lv_sps = ['-','_','#','@','$']
+
+get_rsib_of_fstance_having_rsib
+
+['get the rsib of fst ance that has rsib']
+['get'] - ['the rsib of fst ance that has rsib']
+          ['the rsib'] _ of _ ['fst ance that has rsib']
+          ['the']#['rsib']_of_['fst ance']#['that has rsib']  
+                              ['fst']@['ance']#['that']@['has']@['rsib']
+                             
+
+get-the#rsib_of_fst@ance#that@has@rsib
+
+get [the#rsib_of_fst@ance#that@has@rsib]
+
+get [the#rsib] of [fst@ance#that@has@rsib]
+
+get the rsib of [fst@ance] [that@has@rsib]
+
+get the rsib of fst ance that has rsib
+
+
+cmd = 'get-the#rsib_of_fst@ance#that@has@rsib'
+
+root =  {
+    "cmd":'get-the#rsib_of_fst@ance#that@has@rsib',
+    "children":[],
+    "depth":0
+}
+
+from xlist import map
+from xlist import fltr
+
+unhandled = [
+    root
+]
+
+lv_sps = ['-','_','#','@','$']
+
+def creat_root(cmd):
+    root =  {
+        "cmd":root,
+        "children":[],
+        "depth":0
+    }
+    return(root)
+    
+
+def cmd_to_child(cmd,pdepth):
+    d = {
+        "cmd":cmd,
+        "children":[],
+        "depth":pdepth+1
+    }
+    return(d)
+
+def get_children(ele,lv_sps):
+    cmd = ele['cmd']
+    depth= ele['depth']
+    sp = lv_sps[depth]
+    ch_cmds = cmd.split(sp)
+    children = map.mapv(ch_cmds,lambda cmd:cmd_to_child(cmd,depth))
+    ele['children'] = children
+    return(children)
+
+def is_leaf(ele,lv_sps):
+    cmd = ele['cmd']
+    for sp in lv_sps:
+        cond = sp in cmd
+        if(cond):
+            return(False)
+        else:
+            pass
+    return(True)
+
+def get_nonleaf_children(children,lv_sps):
+    nonleaf_children = fltr.fltrv(children,lambda ch:not(is_leaf(ele,lv_sps)))
+    return(nonleaf_children) 
+
+
+while(len(unhandled)>0):
+    next_unhandled = []
+    for i in range(len(unhandled)):
+        ele = unhandled[i]
+        children = get_children(ele,lv_sps)
+        nonleaf_children = get_nonleaf_children(children,lv_sps)
+        next_unhandled = next_unhandled + nonleaf_children
+    unhandled = next_unhandled
+
+
+
+
+nest
+
+new_root
+creat_root(raw)
+    _cfg:{}      #一些通用德全局参数  
+    _guid
+    _children:[]
+    _depth:
+    raw:      //客户自定义参数
+
+
+new_child()
+creat_child(raw)
+
+get_children(ele)
+
+is_leaf(ele)
+
+get_nonleaf_children(ele)
+
+
+def creat_nest_tree(raw):
+    root = creat_root(raw)
+    unhandled = [root]
+    while(len(unhandled)>0):
+        next_unhandled = []
+        for i in range(len(unhandled)):
+            ele = unhandled[i]
+            children = get_children(ele)
+            nonleaf_children = get_nonleaf_children(children)
+            next_unhandled = next_unhandled + nonleaf_children
+        unhandled = next_unhandled
+    return(root)
+
+
+
+class NestTree:
+    #####
+    def __init__(self,raw,**kwargs):
+        self.creat_ele = kwargs['creat_ele']
+        self.is_leaf = kwargs['is_leaf']
+        self.get_children = kwargs['get_children']
+        self.tree = self._creat_nest_tree(raw)
+    def __repr__(self):
+        s = self.tree.__repr__()
+        return(s)
+    ####
+    @classmethod
+    def get_nonleaf_children(children):
+        nonleaf_children = fltr.fltrv(children,lambda ch:not(self.is_leaf(ele)))
+        return(nonleaf_children)
+    #####
+    def _creat_nest_tree(self,raw):
+        root = self.creat_ele(raw)
+        unhandled = [root]
+        while(len(unhandled)>0):
+            next_unhandled = []
+            for i in range(len(unhandled)):
+                ele = unhandled[i]
+                children = self.get_children(ele)
+                nonleaf_children = self._get_nonleaf_children(children)
+            unhandled = next_unhandled
+        return(root)
+
+
+
+class Test:
+    def __init__(self,x):
+        self.x = x
+    def tst(self,n):
+        self.x(n)
+        self.cls2()
+    @classmethod
+    def _cls2(cls):
+        print('aaaaa')

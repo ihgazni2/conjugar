@@ -1,0 +1,15 @@
+分读符号（diéresis）
+- 一共40个单词
+- cat di_u.ü.cat | egrep -o ".ü." | wc -l
+- DI_U# cat di_u.ü.cat | egrep -o ".ü." | sort -u
+güe   g-üe
+güi   g-üi
+----
+güí   gü-í
+
+
+两个弱元音, 重读字母在第二个字母
+
+
+
+ 

@@ -1,0 +1,84 @@
+esconju abducir      ip | egrep yo  >> cir.ip.yo
+esconju aducir       ip | egrep yo  >> cir.ip.yo
+esconju antedecir    ip | egrep yo  >> cir.ip.yo
+esconju arrecir      ip | egrep yo  >> cir.ip.yo
+esconju autoinduci   ip | egrep yo  >> cir.ip.yo
+esconju balbucir     ip | egrep yo  >> cir.ip.yo
+esconju bendecir     ip | egrep yo  >> cir.ip.yo
+esconju condecir     ip | egrep yo  >> cir.ip.yo
+esconju conducir     ip | egrep yo  >> cir.ip.yo
+esconju contradeci   ip | egrep yo  >> cir.ip.yo
+esconju coproducir   ip | egrep yo  >> cir.ip.yo
+esconju decir        ip | egrep yo  >> cir.ip.yo
+esconju deducir      ip | egrep yo  >> cir.ip.yo
+esconju desdecir     ip | egrep yo  >> cir.ip.yo
+esconju desfruncir   ip | egrep yo  >> cir.ip.yo
+esconju deslucir     ip | egrep yo  >> cir.ip.yo
+esconju desuncir     ip | egrep yo  >> cir.ip.yo
+esconju educir       ip | egrep yo  >> cir.ip.yo
+esconju enlucir      ip | egrep yo  >> cir.ip.yo
+esconju entredecir   ip | egrep yo  >> cir.ip.yo
+esconju entrelucir   ip | egrep yo  >> cir.ip.yo
+esconju esparcir     ip | egrep yo  >> cir.ip.yo
+esconju esperdecir   ip | egrep yo  >> cir.ip.yo
+esconju estarcir     ip | egrep yo  >> cir.ip.yo
+esconju fruncir      ip | egrep yo  >> cir.ip.yo
+esconju inducir      ip | egrep yo  >> cir.ip.yo
+esconju interdecir   ip | egrep yo  >> cir.ip.yo
+esconju introducir   ip | egrep yo  >> cir.ip.yo
+esconju lucir        ip | egrep yo  >> cir.ip.yo
+esconju maldecir     ip | egrep yo  >> cir.ip.yo
+esconju marcir       ip | egrep yo  >> cir.ip.yo
+esconju predecir     ip | egrep yo  >> cir.ip.yo
+esconju prelucir     ip | egrep yo  >> cir.ip.yo
+esconju producir     ip | egrep yo  >> cir.ip.yo
+esconju reconducir   ip | egrep yo  >> cir.ip.yo
+esconju redecir      ip | egrep yo  >> cir.ip.yo
+esconju reducir      ip | egrep yo  >> cir.ip.yo
+esconju relucir      ip | egrep yo  >> cir.ip.yo
+esconju reproducir   ip | egrep yo  >> cir.ip.yo
+esconju resarcir     ip | egrep yo  >> cir.ip.yo
+esconju retraducir   ip | egrep yo  >> cir.ip.yo
+esconju rezurcir     ip | egrep yo  >> cir.ip.yo
+esconju seducir      ip | egrep yo  >> cir.ip.yo
+esconju traducir     ip | egrep yo  >> cir.ip.yo
+esconju zurcir       ip | egrep yo  >> cir.ip.yo
+
+
+
+
+
+
+
+traslucir
+uncir
+
+
+# 以cir结尾的 前面是元音 的 变zco 
+
+|             yo|          abduzco|       s1|
+|             yo|         aduzco|       s1|
+|             yo|           conduzco|       s1|
+|             yo|          deduzco|       s1|
+|             yo|           desluzco|       s1|
+|             yo|          enluzco|       s1|
+|             yo|          induzco|       s1|
+|             yo|             introduzco|       s1|
+|             yo|        luzco|       s1|
+|             yo|           produzco|       s1|
+|             yo|             reconduzco|       s1|
+|             yo|          reduzco|       s1|
+|             yo|          reluzco|       s1|
+|             yo|             reproduzco|       s1|
+|             yo|          seduzco|       s1|
+|             yo|           traduzco|       s1|
+
+
+# 以cir结尾的 前面是辅音 的 变zo 
+CIR# cat cir.ip.yo | egrep zo
+|             yo|            esparzo|       s1|
+|             yo|           frunzo|       s1|
+|             yo|            resarzo|       s1|
+|             yo|          zurzo|       s1|
+
+

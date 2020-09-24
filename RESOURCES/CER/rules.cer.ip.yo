@@ -1,0 +1,109 @@
+#前面是元音 c->zc
+CER# cat cer.ip.yo  | egrep "zco"
+|             yo|            abastezco|       s1|
+|             yo|            aborrezco|       s1|
+|             yo|           adolezco|       s1|
+|             yo|            adormezco|       s1|
+|             yo|            agradezco|       s1|
+|             yo|           amanezco|       s1|
+|             yo|            anochezco|       s1|
+|             yo|           aparezco|       s1|
+|             yo|           apetezco|       s1|
+|             yo|          carezco|       s1|
+|             yo|             compadezco|       s1|
+|             yo|             comparezco|       s1|
+|             yo|            complazco|       s1|
+|             yo|          conozco|       s1|
+|             yo|             convalezco|       s1|
+|             yo|         crezco|       s1|
+|             yo|           decrezco|       s1|
+|             yo|              desaparezco|       s1|
+|             yo|             desconozco|       s1|
+|             yo|              desfallezco|       s1|
+|             yo|               desfavorezco|       s1|
+|             yo|               deshumedezco|       s1|
+|             yo|             desmerezco|       s1|
+|             yo|              desobedezco|       s1|
+|             yo|             embastezco|       s1|
+|             yo|             embellezco|       s1|
+|             yo|              emblandezco|       s1|
+|             yo|             embrutezco|       s1|
+|             yo|               empequeñezco|       s1|
+|             yo|             empobrezco|       s1|
+|             yo|            enaltezco|       s1|
+|             yo|            encanezco|       s1|
+|             yo|            encarezco|       s1|
+|             yo|            endurezco|       s1|
+|             yo|              enflaquezco|       s1|
+|             yo|            enfurezco|       s1|
+|             yo|              engrandezco|       s1|
+|             yo|             enloquezco|       s1|
+|             yo|            enmudezco|       s1|
+|             yo|             ennegrezco|       s1|
+|             yo|             ennoblezco|       s1|
+|             yo|               enorgullezco|       s1|
+|             yo|             enriquezco|       s1|
+|             yo|              enronquezco|       s1|
+|             yo|              ensombrezco|       s1|
+|             yo|             ensordezco|       s1|
+|             yo|             entorpezco|       s1|
+|             yo|              entristezco|       s1|
+|             yo|            entumezco|       s1|
+|             yo|            envejezco|       s1|
+|             yo|            envilezco|       s1|
+|             yo|             esclarezco|       s1|
+|             yo|             establezco|       s1|
+|             yo|             estremezco|       s1|
+|             yo|           fallezco|       s1|
+|             yo|            favorezco|       s1|
+|             yo|           florezco|       s1|
+|             yo|             fortalezco|       s1|
+|             yo|             fosforezco|       s1|
+|             yo|           guarezco|       s1|
+|             yo|            humedezco|       s1|
+|             yo|              languidezco|       s1|
+|             yo|          merezco|       s1|
+|             yo|        nazco|       s1|
+|             yo|           obedezco|       s1|
+|             yo|          ofrezco|       s1|
+|             yo|            oscurezco|       s1|
+|             yo|        pazco|       s1|
+|             yo|          padezco|       s1|
+|             yo|            palidezco|       s1|
+|             yo|          parezco|       s1|
+|             yo|          perezco|       s1|
+|             yo|             permanezco|       s1|
+|             yo|             pertenezco|       s1|
+|             yo|         plazco|       s1|
+|             yo|             prevalezco|       s1|
+|             yo|             reaparezco|       s1|
+|             yo|              reblandezco|       s1|
+|             yo|            reconozco|       s1|
+|             yo|             recrudezco|       s1|
+|             yo|              rejuvenezco|       s1|
+|             yo|          renazco|       s1|
+|             yo|               resplandezco|       s1|
+|             yo|              restablezco|       s1|
+|             yo|          subyazco |       s1|
+|             yo|       yazco |       s1|
+CER#
+
+
+
+#以coc 结尾的   coc -> cuez
+
+|             yo|         cuezo|       s1|                         coc-er      coc->cuez
+|             yo|           escuezo|       s1|                     es-coc-er   coc->cuez
+|             yo|         mezo|       s1|
+|             yo|           recuezo|       s1|                     re-coc-er   coc->cuez
+
+
+#以辅音+C 结尾的  c->z
+|             yo|             convenzo|       s1|
+|             yo|           ejerzo|       s1|
+|             yo|            retuerzo|       s1|
+|             yo|          tuerzo|       s1|
+|             yo|          venzo|       s1|
+CER#
+
+

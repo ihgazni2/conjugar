@@ -1,0 +1,32 @@
+
+        'ip':'indicativo presente',
+        'ipps':'indictivo pretérito perfecto simple',
+        'ipa':'indicativo pretérito anterior',
+        'ipi':'indicativo pretérito imperfecto',
+        'ifi':'indicativo futuro imperfecto',
+        'sp':'subjuntivo presente',
+        'spi':'subjuntivo pretérito imperfecto',
+        'sfi':'subjuntivo futuro imperfecto',
+        'cs':'condicional simple',
+        'ia':'imperativo afirmativo',
+    
+ip ipi ipps ifi cs sp sfi spi ia
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|         person|[0m[0m[38;5;11m[48;5;0m             ip|[0m[0m[38;5;12m[48;5;0mprsn_abbr|[0m
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|             yo|[0m[0m[38;5;11m[48;5;0m          zurzo|[0m[0m[38;5;12m[48;5;0m       s1|[0m
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|         tú/vos|[0m[0m[38;5;11m[48;5;0mzurces / zurcís|[0m[0m[38;5;12m[48;5;0m       s2|[0m
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|          usted|[0m[0m[38;5;11m[48;5;0m          zurce|[0m[0m[38;5;12m[48;5;0m      s23|[0m
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|        él,ella|[0m[0m[38;5;11m[48;5;0m          zurce|[0m[0m[38;5;12m[48;5;0m       s3|[0m
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|nostros,nostras|[0m[0m[38;5;11m[48;5;0m       zurcimos|[0m[0m[38;5;12m[48;5;0m      pl1|[0m
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|vostros,vostras|[0m[0m[38;5;11m[48;5;0m         zurcís|[0m[0m[38;5;12m[48;5;0m      pl2|[0m
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|        ustedes|[0m[0m[38;5;11m[48;5;0m         zurcen|[0m[0m[38;5;12m[48;5;0m     pl23|[0m
++++++++++++++++++++++++++++++++++++++++++++
+[0m[38;5;12m[48;5;0m|    ellos,ellas|[0m[0m[38;5;11m[48;5;0m         zurcen|[0m[0m[38;5;12m[48;5;0m      pl3|[0m
++++++++++++++++++++++++++++++++++++++++++++
