@@ -1,4 +1,4 @@
-/usr/local/lib/python3.6/dist-packages/conjugar-0.67-py3.6.egg
+/usr/local/lib/python3.6/dist-packages/conjugar-0.68-py3.6.egg
 /usr/local/bin/esconju
 /usr/local/bin/essila
 /usr/local/bin/esverb
