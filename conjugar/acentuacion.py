@@ -287,7 +287,7 @@ def de_y_engine(last_de_rslt,curr_regex,conds):
     rslt = []
     for i in range(0,last_de_rslt.__len__()):
         ele = last_de_rslt[i]
-        cond = araq.de_cond_or_engine(ele,conds,lambda ele,cond:(ele in cond.strip('$')))
+        cond = araq.de_cond_or_engine(ele,conds,lambda cond,ele:(cond.strip('$') == ele))
         if(cond):
             rslt.append(ele)
         else:

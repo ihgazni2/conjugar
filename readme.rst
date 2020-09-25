@@ -23,8 +23,6 @@ essila
     ::
         
 
-
-
 esverb
 ~~~~~~
 - esverb <string-pattern>
@@ -46,9 +44,6 @@ esconju
 - in progressing(some special words out of rule)....
 - esconju <word> <ip ipi ipps ifi cs sp sfi spi ia>
     
-    ::
-        
-
     ::
 
         CONJUGAR# esconju registrar ip sp
