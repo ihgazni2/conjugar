@@ -282,6 +282,20 @@ def de_engine(last_de_rslt,curr_regex,conds):
             tmp = araq.regex_split(curr_regex,ele)
             rslt.extend(tmp)
     return(rslt)
+
+def de_y_engine(last_de_rslt,curr_regex,conds):
+    rslt = []
+    for i in range(0,last_de_rslt.__len__()):
+        ele = last_de_rslt[i]
+        cond = araq.de_cond_or_engine(ele,conds,lambda ele,cond:(ele in cond.strip('$')))
+        if(cond):
+            rslt.append(ele)
+        else:
+            tmp = araq.regex_split(curr_regex,ele)
+            rslt.extend(tmp)
+    return(rslt)
+
+
 ##############
 
 
@@ -294,7 +308,7 @@ def de_y(s):
     regex_y_trip = araq.creat_or_from_sarr(Y_TRIPTONGO)
     de_y_rslt = araq.regex_split(regex_y_trip,s)
     regex_y_dip = araq.creat_or_from_sarr(Y_DIPTRONGO)
-    de_y_rslt = de_engine(de_y_rslt,regex_y_dip,Y_TRIPTONGO)
+    de_y_rslt = de_y_engine(de_y_rslt,regex_y_dip,Y_TRIPTONGO)
     return(de_y_rslt)
 
 

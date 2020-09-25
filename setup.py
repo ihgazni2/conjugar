@@ -10,6 +10,7 @@ setup(
       long_description = "refer to .md files in https://github.com/ihgazni2/conjugar",
       entry_points = {
          'console_scripts': [
+             'essila=conjugar.bin.es_sila:main',
              'esconju=conjugar.bin.es_word_conjugar:main',
              'esverb=conjugar.bin.es_verb_list:main'
           ]
