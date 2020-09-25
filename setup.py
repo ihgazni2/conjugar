@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
       name="conjugar",
-      version = "0.67",
+      version = "0.68",
       description="handle,.in progressing..,APIs",
       author="dapeli",
       url="https://github.com/ihgazni2/conjugar",
