@@ -263,3 +263,44 @@ class Test:
     @classmethod
     def _cls2(cls):
         print('aaaaa')
+
+
+word[单词] lexcate[词性]  syllables[音节数组]  accent_pos[重读音节位置]  stress_char_pos[重读字母相对位置] 
+meaning[意思]  变位
+
+syllable {
+   accent:
+   accent_pos:
+   stress_char:
+   stress_char_pos
+}
+
+
+token分割表  
+
+
+
+//TOK 表
+word   tokens  
+
+tok {
+    raw:''
+    prop:'' // 三元音 ,双元音,......连辅音，双辅音 
+}
+
+
+//音节表   去查音节表 
+
+word  syllables  syllable_0  syllable_1 ..........  accent_pos  accent stress_char_pos  tress_char
+
+
+//词性表 
+word lexcate  
+
+
+https://dle.rae.es/abrir?m=form#conjugacioncc42use
+
+https://dle.rae.es/silla#A7DGqoA
+https://developer.oxforddictionaries.com/
+
+http://www.esdict.cn/dicts/es/ni%c3%b1a?recordid=NjExODg=

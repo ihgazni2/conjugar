@@ -180,8 +180,8 @@ DI_CONSONANT = ['ch','ll','rr']
 
 Y_LAST = ['@']
 Y_CONSTANT = ["\x01"]
-Y_DIPTRONGO = ['ay','ey','oy','uy','áy','éy','óy','üy']
-Y_TRIPTONGO = ['iay','iey', 'ioy', 'iáy','iéy','ióy','uay','uey','uoy','uáy','uéy','uóy','üey']
+Y_DIPTRONGO = ['ay$','ey$','oy$','uy$','áy$','éy$','óy$','üy$']
+Y_TRIPTONGO = ['iay$','iey$', 'ioy$', 'iáy$','iéy$','ióy$','uay$','uey$','uoy$','uáy$','uéy$','uóy$','üey$']
 
 DIPTRONGO = ['ai','au','ei','eu','oi','ou','ia','ie','io','ua','ue','uo','iu','ui','ái','áu','éi','éu','ói','óu','iá','uá','ié','ué','ió','uó','üe','üi']
 TRIPTONGO = ['iai', 'iau', 'iei', 'ieu', 'ioi', 'iou', 'iái', 'iáu', 'iéi', 'iéu', 'iói', 'ióu', 'uai', 'uau', 'uei', 'ueu', 'uoi', 'uou', 'uái', 'uáu', 'uéi', 'uéu', 'uói', 'uóu','üei','üeu']
