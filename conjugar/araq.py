@@ -60,7 +60,7 @@ def de_cond_and_engine(ele,*args):
             pass
         else:
             func = funcs
-            funcs = elel.init(func,lngth)
+            funcs = elel.init(lngth,func)
     else:
         func = lambda ele,cond:(ele in cond)
         funcs = elel.init(lngth,func)
@@ -84,7 +84,7 @@ def de_cond_or_engine(ele,*args):
             pass
         else:
             func = funcs
-            funcs = elel.init(func,lngth)
+            funcs = elel.init(lngth,func)
     else:
         func = lambda ele,cond:(ele in cond)
         funcs = elel.init(lngth,func)
