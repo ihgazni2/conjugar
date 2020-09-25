@@ -1,0 +1,464 @@
+ir go
+
+dar give 
+ser be
+ver see
+
+amar love
+arar plow  开路
+asar roast 
+asir grab
+atar tie
+caer fall
+fiar sell
+huir escape
+leer read
+liar roll
+mear piss
+oler smell
+orar pray
+osar dare
+piar cheep  吱吱叫
+roer gnaw   咬
+unir join
+usar use
+
+
+
+catar   taste
+abrir   open 
+afear   uglize 
+aguar   
+aliar
+alzar
+andar
+arder
+armar
+asear
+aunar
+aviar
+bajar
+balar
+basar
+batir
+bañar
+beber
+besar
+botar
+bufar
+caber
+cagar
+capar
+casar
+cavar
+cazar
+cebar
+ceder
+cegar
+cejar
+cenar
+cesar
+ceñir
+citar
+cocer
+coger
+colar
+comer
+copar
+coser
+crear
+creer
+criar
+curar
+datar
+dañar
+deber
+decir
+dejar
+doler
+domar
+donar
+dorar
+dotar
+dudar
+durar
+echar
+errar
+estar
+fajar
+fijar
+fluir
+fumar
+gafar
+ganar
+gañir
+gemir
+girar
+gozar
+guiar
+haber
+hacer
+helar
+herir
+hilar
+hozar
+idear
+jalar
+joder
+jugar
+jurar
+lamer
+latir
+lavar
+legar
+ligar
+lijar
+limar
+lucir
+mamar
+manar
+matar
+mecer
+medir
+meter
+mimar
+minar
+mirar
+mofar
+mojar
+molar
+moler
+morar
+morir
+mover  move
+mudar
+mugir
+mutar
+nacer
+nadar
+negar
+nevar
+notar
+obrar
+odiar
+ojear
+optar
+otear
+pacer
+pagar
+parar
+parir
+pasar
+pecar
+pedir
+pegar
+pelar
+penar
+pesar
+petar
+picar
+pilar
+pisar
+pitar
+podar
+poder
+poner   put
+posar
+pujar
+pulir
+rajar
+rapar
+rayar
+regar
+regir
+remar
+retar
+rezar
+reñir
+rifar
+rimar
+rizar
+robar
+rodar
+rogar
+rotar
+rozar
+rugir
+rular
+saber
+sacar
+salar
+salir
+sanar
+secar
+sedar
+segar
+sisar
+sobar
+solar
+soler used-to
+sonar
+soñar
+subir go-up
+sudar
+sumar
+sumir
+talar
+tapar
+tasar
+tañer 
+tejar
+tejer
+temer fear
+tener have
+teñir dye
+timar
+tirar
+tocar
+tomar take
+topar
+toser
+traer bring
+ungir
+untar 
+urdir warp            扭曲
+vagar wander
+valer cost
+varar run-around      
+vejar humiliate       
+velar keep-vigil-over 看护
+venir come
+vetar veto            禁止
+virar turn
+visar endorse
+vivir live
+volar fly
+votar vote
+yacer lie
+
+
+
+
+copiar  copy
+borrar  delete
+
+
+
+
+consigue         get
+
+encontrar        find
+
+primero          first
+último           last
+uno              one
+cualquier        any
+ciertos          certain
+algunos          some
+todos            all
+ninguno          none
+
+
+
+hermano          sibling
+padre            parent
+abuelo           grand-parent
+antepasado       ancestor
+primo            cousin
+
+profundidad      depth
+amplitud         breadth
+altura           height
+ancho            width
+
+descendiente     descendant
+
+anterior         previous
+siguiente        next
+
+layer            capa
+
+
+
+wfs
+dfs
+   sdfs
+   edefs
+   sedfs
+
+
+
+
+
+rt         root
+an         ance
+p          parent
+gp         grand-parent
+ans        ances 
+anceq      
+
+ch         child
+fstch      first-child
+lstch      last-child
+chs        children
+
+sib        sibling
+fstsib     first-sib
+lstsib     last-sib
+rsib       right-sib
+lsib       left-sib
+psibs      preceding-sibs
+fsibs      following-sibs
+sibs       siblings
+sibseq     
+
+des        des
+desxy      des_x_y
+deses      descendants
+
+cin       
+rcin
+lcin
+
+uncle
+runcle
+luncle
+
+
+dth         depth
+bth         breadth
+pbth        parent-breadth
+lyr         layer
+loc         location
+x           
+y           
+chloc       
+chlocs      
+
+
+
+offset      offset
+w           width
+h           height
+
+wfs         width-first-list
+dfs
+sdfs
+edfs
+sedfs
+
+njarr
+nj
+
+tree
+nd
+
+mat
+ele
+
+leaf_
+nonleaf_ 
+
+
+tag
+pl           path-list
+rpl          guid-path-list
+bpl          breadth-path-list
+spl          sibseq-path-list
+tpl          tag-path-list
+
+
+
+sametpl_seq  
+
+
+nest_dict  
+nest_dict_cpl  children n children n children n....
+    
+
+
+
+njarr
+tree
+mat
+ele 
+{
+    _mat:''  //根的_id
+    _id:'',
+    _pbreadth:number|null;//     
+    _sibseq:number,
+    
+    
+    /*fullfill*/
+    _breadth?:number;
+    _depth?:number;
+    _lsib?:;
+    _rsib?:;
+    _lcin?:;
+    _rcin?:;
+    
+    tag:
+    tpl:
+    bpl:
+    spl:
+    rpl: 
+    /**/
+
+}
+
+nest_dict 
+{
+    _id:''
+    _children:[],
+    
+}
+ 
+
+如果以mat直接计算 
+增加时候 
+   _pbreadth = ele._breadth
+   _sibseq = 根据动作 append        prepend      insert 决定
+                      append_mat    prepend_mat  insert_mat 
+   并且更新子mat
+
+删除时候rm   
+
+
+disconn
+
+
+对mat进行变更时 先要清除所有计算出来的信息
+fullfill  最后fullfill 如果是
+
+
+
+四种结构
+
+
+_fstch _lsib _rsib _parent 存储
+
+njarr   nj      每个节点是个json
+tree    nd      每个节点是个object 
+
+
+_pbreadth _sibseq _breadth _depth 存储
+ejarr   ej  每个节点是个json 
+mat     ed  
+
+
+
+
+可 fullfill
+
+_children 存储
+nestj    nstj        整个是个大json
+nesto    nstd        整个是个大object 
+
+可fullfill
+
+
+所有类型均可通过 njarr 转换
+        -to-njarr-to- 
+
+
+

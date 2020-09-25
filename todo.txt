@@ -25,6 +25,10 @@ Paraguay(peh-ruh-gwey)
 - 必需位于词尾
 ['ay$', 'ey$', 'oy$', 'uy$', 'áy$', 'éy$', 'óy$', 'üy$']
 
+
+
+
+
 4.1 还有Y 处于2个辅音之间的情况
  Y 处于两个辅音之间 是一个元音
 
@@ -54,6 +58,62 @@ terabyte
 tymnet
 zetabyte
 
+RESOURCES# cat words.cat | egrep by
+abyecto
+baby
+bypass
+byte
+exabyte
+gigabytes
+hobby
+kilobyte
+megabyte
+petabyte
+rugby
+subyacente
+subyacer
+subyugación
+subyugado
+subyugar
+terabyte
+zetabyte
+
+
+RESOURCES# essila subyacente
+-----------------------------
+sub-ya-cen-te
+-----------------------------
+{
+ 'silabas':
+            [
+             'sub',
+             'ya',
+             'cen',
+             'te'
+            ],
+ 'accent_pos': 2,
+ 'accent': 'cen',
+ 'stress_char_pos': 1,
+ 'stress_char': 'e'
+}
+-----------------------------
+['sub', 'ya', 'cen', 'te']
+RESOURCES#
+subyacente(soob-yah-sehn-teh)  
+
+
+4.3   V_Y_C   Y 前面是元音后面是辅音
+      
+RESOURCES# cat words.cat | egrep "[aeiouáéíóúü]y[^aeiouáéíóúü]"
+aymara
+honeypot
+joystick
+peyronie
+playboy
+reykjavik
+
+
+
 
 5. SOLO_Y
 y ----单独使用
@@ -78,6 +138,19 @@ y ----单独使用
 
 10. VOWEL
 ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú','ü']
+
+
+
+
+
+11. 3个辅音，没有连缀 没有
+
+前两个归前面
+
+三个辅音在一起，如果有辅音连缀，则辅音连缀和后面的元音构成1个音节，另一个辅音归属其他音节；如果没有，则2：1（即：前2个归前，后1个归后）
+
+conspirar(kohns-pee-rahr)
+
 
 
 # 字母表
@@ -342,3 +415,34 @@ https://dle.rae.es/silla#A7DGqoA
 https://developer.oxforddictionaries.com/
 
 http://www.esdict.cn/dicts/es/ni%c3%b1a?recordid=NjExODg=
+
+
+如果两个辅音开头非连缀:
+
+kyoto
+myanmar     Myanmar(myahn-mar)
+nyala       
+
+
+tok  
+   v   元音组
+       tri    不带y的三元音
+       tri-y$  带y的三元音  y必需在结尾
+
+       dip    不带y的双元音
+       dip-y$  带y的双元音   y必需在结尾
+       dio-v-y-c  带y的双元音   y前面是元音后面是辅音
+
+       y$      y 在结尾 
+       c-y-c   y 在两个辅音之间  
+       ^y$     单y 
+       其他单字母元音
+
+   c   辅音组
+       cl   辅音连缀
+       dl   双音
+       y  不在结尾  不在两个辅音之间   不是单独y
+       其他单字母辅音
+
+
+
