@@ -7,7 +7,15 @@
 1. TRIPTONGO
 ['iai', 'iau', 'iei', 'ieu', 'ioi', 'iou', 'iái', 'iáu', 'iéi', 'iéu', 'iói', 'ióu', 'uai', 'uau', 'uei', 'ueu', 'uoi', 'uou', 'uái', 'uáu', 'uéi', 'uéu', 'uói', 'uóu', 'üei', 'üeu']
 2. Y_TRIPTONGO
-['iay', 'iey', 'ioy', 'iáy', 'iéy', 'ióy', 'uay', 'uey', 'uoy', 'uáy', 'uéy', 'uóy', 'üey']
+['iay$', 'iey$', 'ioy$', 'iáy$', 'iéy$', 'ióy$', 'uay$', 'uey$', 'uoy$', 'uáy$', 'uéy$', 'uóy$', 'üey$']
+
+--必需位于词尾
+
+https://www.spanishdict.com/translate/c%C3%B3ccyx
+
+el paraguayo, la paraguaya(pah-rah-gwah-yoh)
+
+Paraguay(peh-ruh-gwey)
 
 
 3. DIPTRONGO
@@ -16,6 +24,36 @@
 4. Y_DIPTRONGO
 - 必需位于词尾
 ['ay$', 'ey$', 'oy$', 'uy$', 'áy$', 'éy$', 'óy$', 'üy$']
+
+4.1 还有Y 处于2个辅音之间的情况
+ Y 处于两个辅音之间 是一个元音
+
+bodysurfista
+bypass
+byte
+copyleft
+copyright
+cybermetría
+cóccyx
+exabyte
+gigabytes
+gymkhana
+hollywood
+hypercard
+hypersearch
+hytelnet
+jekyl
+kilobyte
+ladybird
+megabyte
+mylar
+nylon
+petabyte
+storyboard
+terabyte
+tymnet
+zetabyte
+
 
 5. SOLO_Y
 y ----单独使用

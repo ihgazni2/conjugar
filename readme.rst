@@ -17,11 +17,34 @@ Part0: CLI
     
 essila
 ~~~~~~
+- some words include y need special handling,maybe not correct
 - get silabas
 - essila <word>
     
     ::
-        
+
+        CONJUGAR# essila desayunar
+        -----------------------------
+        de-sa-yu-nar
+        -----------------------------
+        {
+         'silabas':
+                    [
+                     'de',
+                     'sa',
+                     'yu',
+                     'nar'
+                    ],
+         'accent_pos': 3,
+         'accent': 'nar',
+         'stress_char_pos': 1,
+         'stress_char': 'a'
+        }
+        -----------------------------
+        ['de', 'sa', 'yu', 'nar']
+        CONJUGAR#
+
+
 
 esverb
 ~~~~~~
